@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+    <title>Employee Management</title>
+</head>
+<body>
+<h1>Welcome to Employee Management System</h1>
+
+<ul>
+    <li><h:link outcome="affectation.xhtml" value="Assign Employee to Project" /></li>
+    <li><h:link outcome="employeeList.xhtml" value="View Employee List" /></li>
+</ul>
+<h:form>
+    <h2>Add Employee</h2>
+    <h:panelGrid columns="2">
+        <h:outputLabel for="name" value="Name: " />
+        <h:inputText id="name" value="#{employeeBean.employee.name}" required="true"/>
+
+        <h:outputLabel for="email" value="Email: " />
+        <h:inputText id="email" value="#{employeeBean.employee.email}" required="true"/>
+
+        <h:outputLabel for="skills" value="Skills: " />
+        <h:selectManyListbox id="skills" value="#{employeeBean.employee.skills}">
+            <f:selectItem itemLabel="Java" itemValue="Java" />
+            <f:selectItem itemLabel="Python" itemValue="Python" />
+            <f:selectItem itemLabel="AWS" itemValue="AWS" />
+            <f:selectItem itemLabel="DevOps" itemValue="DevOps" />
+        </h:selectManyListbox>
+    </h:panelGrid>
+
+    <h:commandButton value="Add Employee" action="#{employeeBean.addEmployee}" />
+</h:form>
+</body>
+</html>
