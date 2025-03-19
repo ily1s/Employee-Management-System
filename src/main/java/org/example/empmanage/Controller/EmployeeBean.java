@@ -1,7 +1,11 @@
-package org.example.empmanage;
+package org.example.empmanage.Controller;
 
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Named;
+import org.example.empmanage.DAO.EmployeeDAO;
+import org.example.empmanage.Model.Employee;
+import org.example.empmanage.Model.Project;
+import org.example.empmanage.DAO.ProjectDAO;
 
 import java.io.Serializable;
 import java.util.ArrayList;

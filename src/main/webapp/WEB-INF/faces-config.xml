@@ -6,7 +6,7 @@
 
     <managed-bean>
         <managed-bean-name>EmployeeBean</managed-bean-name>
-        <managed-bean-class>org.example.empmanage.Employee</managed-bean-class>
+        <managed-bean-class>org.example.empmanage.Model.Employee</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
 

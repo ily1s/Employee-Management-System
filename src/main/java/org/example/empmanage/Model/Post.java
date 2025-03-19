@@ -1,4 +1,4 @@
-package org.example.empmanage;
+package org.example.empmanage.Model;
 
 public enum Post {
     MANAGER,
