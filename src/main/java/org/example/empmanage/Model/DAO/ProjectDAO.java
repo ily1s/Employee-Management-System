@@ -1,4 +1,4 @@
-package org.example.empmanage.DAO;
+package org.example.empmanage.Model.DAO;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
