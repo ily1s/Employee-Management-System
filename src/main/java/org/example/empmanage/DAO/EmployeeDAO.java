@@ -82,4 +82,8 @@ public class EmployeeDAO {
         return em.createQuery("SELECT e FROM Employee e LEFT JOIN FETCH e.assignedProjects", Employee.class)
                 .getResultList();
     }
+
+    public Employee findById(Long selectedEmployeeId) {
+        return em.find(Employee.class, selectedEmployeeId);
+    }
 }

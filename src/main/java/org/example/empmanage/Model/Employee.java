@@ -92,4 +92,17 @@ public class Employee implements Serializable {
     public void setProjects(List<Project> projects) {
         this.projects = projects;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", skills=" + skills +
+                ", post=" + post +
+                ", projects=" + (projects != null ? projects.size() : 0) +
+                ", assignedProjects=" + (assignedProjects != null ? assignedProjects.size() : 0) +
+                '}';
+    }
 }
